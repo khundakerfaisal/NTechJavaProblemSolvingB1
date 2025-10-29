@@ -50,12 +50,9 @@ public class JsonReadAndWrite {
             lastStudentObject.put("studentName", generateStudentName);
             lastStudentObject.put("Age", age);
             //Close json Object
-
-
             lastStudentName.add(lastStudentObject); //Add json object
 
         }
-
 
         FileWriter writer = new FileWriter(fileLocation); //File Write with the location
         writer.write(lastStudentName.toJSONString()); //Array Write
