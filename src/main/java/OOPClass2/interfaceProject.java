@@ -3,6 +3,7 @@ package OOPClass2;
 public interface interfaceProject {
     void drawShape();
     void Eat();
+
 }
 
 //class Circle implements interfaceProject{
