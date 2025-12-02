@@ -42,6 +42,7 @@ public class DarazLogin {
             }
         }
         driver.quit();
+
         driver.switchTo().window(mainWindow);
 
     }
