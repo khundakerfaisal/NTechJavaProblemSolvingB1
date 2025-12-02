@@ -1,7 +1,4 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,7 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BrowserTabHandle {
 
     @Order(1)
@@ -26,6 +23,7 @@ public class BrowserTabHandle {
         driver.switchTo().window(arrayList.get(1));
         Thread.sleep(1000);
         driver.close();
+        driver.quit();
 
 
     }
@@ -47,6 +45,7 @@ public class BrowserTabHandle {
 
             }
         }
+        driver.quit();
 
 
 
